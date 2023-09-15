@@ -9,7 +9,9 @@ var screen_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
-	#hide()
+	hide()
+	var start_position = Vector2(screen_size.x/2, screen_size.y/2)
+	start(start_position)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,4 +49,18 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	pass # Replace with function body.
+	# make player dissapear upon being hit
+	hide()
+	# emit the hit signal
+	hit.emit()
+	# disable hitbox so that we don't emit more than once
+	$CollisionShape2D.set_deferred("disabled", true)
+	
+	
+
+
+func start(pos):
+	# start the game
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
