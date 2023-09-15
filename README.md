@@ -4,6 +4,7 @@ This is my first Godot project. I am following the [dodge the creeps tutorial](h
 
 # Progress
 - 9/13 Got [this far](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html)
+- 9/14 Got to " * Check for input, * Move in the given direction, * Play the appropriate animation."
 
 # Notes:
 ### Scenes vs. Nodes
