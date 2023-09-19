@@ -48,19 +48,18 @@ func _process(delta):
 		$AnimatedSprite2D.flip_v = velocity.y > 0
 
 
-func _on_body_entered(body):
-	# make player dissapear upon being hit
-	hide()
-	# emit the hit signal
-	hit.emit()
-	# disable hitbox so that we don't emit more than once
-	$CollisionShape2D.set_deferred("disabled", true)
-	
-	
-
-
 func start(pos):
 	# start the game
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+
+
+func _on_body_entered(body):
+	# if hit, the player disappears
+	hide()
+	
+	hit.emit()
+	
+	# disable hitbox so it doesn't trigger more than once
+	$CollisionShape2D.set_deferred("disabled", true)
