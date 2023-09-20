@@ -25,11 +25,18 @@ func new_game():
 	# remove all mobs when we start new game
 	get_tree().call_group("mobs", "queue_free")
 
+	# play music
+	$Music.play()
+
+
 func game_over():
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	
 	$HUD.show_game_over()
+	
+	$Music.stop()
+	$DeathSound.play()
 
 
 func _on_start_timer_timeout():
