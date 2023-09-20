@@ -7,6 +7,7 @@ This is my first Godot project. I am following the [dodge the creeps tutorial](h
 - 9/14 Just mapped the up right left down keys to move functionality
 - 9/15 Next step, [Creating the enemy](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/04.creating_the_enemy.html)
 - 9/18 Next step, [Create main menu](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/06.heads_up_display.html)
+- 9/19 Next step, [Finishing up](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/07.finishing-up.html)
 
 # Notes:
 ### Scenes vs. Nodes
