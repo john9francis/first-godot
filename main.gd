@@ -21,6 +21,9 @@ func new_game():
 	# update hud
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
+	
+	# remove all mobs when we start new game
+	get_tree().call_group("mobs", "queue_free")
 
 func game_over():
 	$ScoreTimer.stop()
